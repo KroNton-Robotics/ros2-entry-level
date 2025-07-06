@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="6SdW7Xw68i-UTDWBZWGj" name="1-simple-pub-sub">
-        <mxGraphModel dx="5885" dy="5300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="3318" dy="3440" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -207,6 +207,83 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="124" value="sensor_msg" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" parent="123" vertex="1" connectable="0">
+                    <mxGeometry x="0.3871" y="7" relative="1" as="geometry">
+                        <mxPoint x="18" y="-8" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="125" value="" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+                    <mxGeometry x="3510" y="-130" width="2050" height="1920" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" value="/turtle1/cmd_vel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;fontSize=18;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="4490" y="480" width="180" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="&lt;h1&gt;&lt;font&gt;Turtlesim in Publisher- Subscriber Model&lt;/font&gt;&lt;/h1&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=30;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+                    <mxGeometry x="3895" y="-120" width="1190" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="4880" y="600" width="700" height="870" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="128">
+                    <mxGeometry x="60" y="-20" width="580" height="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="velocity_publisher" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontSize=22;fontStyle=1" vertex="1" parent="128">
+                    <mxGeometry x="185" y="110" width="260" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="152" value="&lt;pre style=&quot;box-sizing: border-box; line-height: 1.4; font-family: SFMono-Regular, Menlo, Monaco, Consolas, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, monospace; margin-top: 0px; margin-bottom: 0px; padding: 12px; overflow: auto; color: rgb(64, 64, 64); text-align: start;&quot; id=&quot;codecell1&quot;&gt;turtle_teleop_key&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=21;fontColor=default;fontStyle=1;labelBackgroundColor=none;" vertex="1" parent="128">
+                    <mxGeometry x="90" y="10" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="3620" y="350" width="660" height="1060" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="133">
+                    <mxGeometry x="-40" width="680" height="1060" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="velocity_subscriber" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;fontSize=22;fontStyle=1" vertex="1" parent="133">
+                    <mxGeometry x="260" y="150" width="262.5" height="262.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" value="pose_publisher" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontSize=22;fontStyle=1" vertex="1" parent="133">
+                    <mxGeometry x="20" y="390" width="257.5" height="257.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="color_sensor_publisher" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontSize=22;fontStyle=1" vertex="1" parent="133">
+                    <mxGeometry x="270" y="670" width="270" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="151" value="&lt;pre style=&quot;box-sizing: border-box; line-height: 1.4; font-family: SFMono-Regular, Menlo, Monaco, Consolas, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, monospace; margin-top: 0px; margin-bottom: 0px; padding: 12px; overflow: auto; color: rgb(64, 64, 64); text-align: start;&quot; id=&quot;codecell1&quot;&gt;turtlesim_node&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=21;fontColor=default;fontStyle=1;labelBackgroundColor=none;" vertex="1" parent="133">
+                    <mxGeometry x="40" y="30" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" source="126" target="135" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="140" value="geometry_msgs/msg/Twist" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=20;fontColor=default;labelBackgroundColor=default;" vertex="1" connectable="0" parent="139">
+                    <mxGeometry x="-0.1433" y="13" relative="1" as="geometry">
+                        <mxPoint x="6" y="42" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="141" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" source="130" target="126" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="142" value="geometry_msgs/msg/Twist" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=20;fontColor=default;labelBackgroundColor=default;" vertex="1" connectable="0" parent="141">
+                    <mxGeometry x="0.1697" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-54" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="145" value="/turtle1/pose" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;fontSize=18;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="4560" y="910" width="190" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="146" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" source="137" target="145" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="147" value="turtlesim/msg/Pose" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" vertex="1" connectable="0" parent="146">
+                    <mxGeometry x="0.3404" y="-9" relative="1" as="geometry">
+                        <mxPoint x="111" y="-9" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="148" value="/turtle1/color_sensor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;fontSize=18;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="4600" y="1220" width="240" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="149" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" source="138" target="148" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="150" value="turtlesim/msg/Color" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" vertex="1" connectable="0" parent="149">
                     <mxGeometry x="0.3871" y="7" relative="1" as="geometry">
                         <mxPoint x="18" y="-8" as="offset"/>
                     </mxGeometry>
