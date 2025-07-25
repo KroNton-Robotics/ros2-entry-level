@@ -11,7 +11,8 @@ class Apartment {
 
     public:
 
-        // Constructor (like initial construction of the apartment)
+        // Constructor Special member function called when an object is created
+        //(like initial construction of the apartment)
         Apartment(int r, string c) {
             rooms = r;
             color = c;
