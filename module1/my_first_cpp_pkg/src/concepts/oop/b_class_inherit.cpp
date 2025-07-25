@@ -57,7 +57,8 @@ public:
     // New method specific to Penthouse
     void penthouseFeatures() {
         
-        displayDetails(); // Inherited from Apartment
+        this->displayDetails(); // Inherited from Apartment using this for ambiguity and improving readability
+
         cout << "Rooftop Pool: " << (rooftopPool ? "Yes" : "No") << endl;
         cout << "Floor: " << floorNumber << endl;
     }
