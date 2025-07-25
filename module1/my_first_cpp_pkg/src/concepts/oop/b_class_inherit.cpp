@@ -48,7 +48,8 @@ private:
     int floorNumber;
 public:
     // Constructor: Calls Apartment's constructor
-    Penthouse(int r, string c, bool pool, int floor) : Apartment(r, c), rooftopPool(pool), floorNumber(floor) // member initializer list
+    Penthouse(int r, string c, bool pool, int floor) :
+     Apartment(r, c), rooftopPool(pool), floorNumber(floor) // member initializer list
         {
 
         }
