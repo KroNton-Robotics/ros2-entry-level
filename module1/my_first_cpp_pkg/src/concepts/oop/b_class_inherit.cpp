@@ -24,44 +24,46 @@ class Apartment {
 };
 
 class Studio : public Apartment {
-private:
-    bool hasKitchenette;
-public:
-    // Constructor: Calls Apartment's constructor with 1 room
-    Studio(string c, bool kitchen):Apartment(1, c){
-        
-        hasKitchenette  = kitchen;      
+    private:
+        bool hasKitchenette;
+
+    public:
+        // Constructor: Calls Apartment's constructor with 1 room
+        Studio(string c, bool kitchen): Apartment(1, c){
+            
+            hasKitchenette  = kitchen;      
+            }
+
+        // New method specific to Studio
+        void studioFeatures() {
+
+            displayDetails(); // Inherited from Apartment
+
+            cout << "Kitchenette: " << (hasKitchenette ? "Yes" : "No") << endl;
         }
-
-    // New method specific to Studio
-    void studioFeatures() {
-
-        displayDetails(); // Inherited from Apartment
-
-        cout << "Kitchenette: " << (hasKitchenette ? "Yes" : "No") << endl;
-    }
 };
 
 class Penthouse : public Apartment {
-private:
-    bool rooftopPool;
-    int floorNumber;
-public:
-    // Constructor: Calls Apartment's constructor
-    Penthouse(int r, string c, bool pool, int floor) :
-     Apartment(r, c), rooftopPool(pool), floorNumber(floor) // member initializer list
-        {
+    private:
+        bool rooftopPool;
+        int floorNumber;
+    public:
+        // Constructor: Calls Apartment's constructor
+        Penthouse(int r, string c, bool pool, int floor) :
+        Apartment(r, c), rooftopPool(pool), floorNumber(floor) // member initializer list
+            {
 
+            }
+
+        // New method specific to Penthouse
+        void penthouseFeatures() {
+            
+            this->displayDetails(); // Inherited from Apartment using this for ambiguity and improving readability
+            //this-> is a pointer to the current object instance
+            
+            cout << "Rooftop Pool: " << (rooftopPool ? "Yes" : "No") << endl;
+            cout << "Floor: " << floorNumber << endl;
         }
-
-    // New method specific to Penthouse
-    void penthouseFeatures() {
-        
-        this->displayDetails(); // Inherited from Apartment using this for ambiguity and improving readability
-
-        cout << "Rooftop Pool: " << (rooftopPool ? "Yes" : "No") << endl;
-        cout << "Floor: " << floorNumber << endl;
-    }
 };
 
 int main() {

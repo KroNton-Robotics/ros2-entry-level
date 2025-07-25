@@ -29,8 +29,8 @@ class Apartment {
 int main()
 {
     Apartment apartment1(3,"white");
+    apartment1.displayDetails();
 
-    // apartment1.displayDetails();
   
     return 0;
 }

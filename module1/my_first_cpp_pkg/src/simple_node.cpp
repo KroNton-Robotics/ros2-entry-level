@@ -8,6 +8,7 @@ class SimpleNode : public rclcpp::Node
 {
 
   public:
+
     SimpleNode(): Node("simple_node")// member initializer list
     {
       RCLCPP_INFO(this->get_logger(), "Simple node Is starting up...");
@@ -22,7 +23,9 @@ class SimpleNode : public rclcpp::Node
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
+
   auto node = std::make_shared<SimpleNode>();  // Heap allocation + shared_ptr
+  
   rclcpp::spin(node);  
   rclcpp::shutdown();
   return 0;
