@@ -13,8 +13,8 @@ public:
   : Node("simple_node")
   {
     RCLCPP_INFO(this->get_logger(), "Simple node Is starting up...");
-    timer_= this->create_wall_timer(
-      500ms, std::bind(&SimpleNode::timer_callback, this));
+
+    timer_= this->create_wall_timer(500ms, std::bind(&SimpleNode::timer_callback, this));
 
   }
     ~SimpleNode()
