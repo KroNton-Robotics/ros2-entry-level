@@ -22,6 +22,14 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+add_executable(a_class_base src/concepts/oop/a_class_base.cpp)
+ament_target_dependencies(a_class_base rclcpp std_msgs) 
+
+add_executable(b_class_inherit src/concepts/oop/b_class_inherit.cpp)
+ament_target_dependencies(b_class_inherit rclcpp std_msgs) 
+
+
+
 add_executable(simple_node src/simple_node.cpp)
 ament_target_dependencies(simple_node rclcpp std_msgs) 
 
@@ -32,6 +40,8 @@ add_executable(simple_timer_lambda_node src/simple_timer_lambda_node.cpp)
 ament_target_dependencies(simple_timer_lambda_node rclcpp std_msgs)
 
 install(TARGETS
+  a_class_base
+  b_class_inherit
   simple_node
   simple_timer_node
   simple_timer_lambda_node
