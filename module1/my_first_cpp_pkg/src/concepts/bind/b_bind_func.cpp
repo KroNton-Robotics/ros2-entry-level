@@ -10,10 +10,10 @@ int multiply(int a, int b)
 }
 
 // Alternative function that multiplies by 10 (not used in main)
-int multiplyByTen(int a)
-{
-    return multiply(a, 10);
-}
+// int multiplyByTen(int a)
+// {
+//     return multiply(a, 10);
+// }
 
 int main()
 {

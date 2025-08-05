@@ -15,8 +15,6 @@ public:
 
 };
 
-
-
 int main()
 {
     A a;
