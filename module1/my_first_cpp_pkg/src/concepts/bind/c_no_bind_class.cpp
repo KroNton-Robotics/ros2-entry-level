@@ -2,28 +2,31 @@
 
 using namespace std;
 
-class A
+class Multiply
 {
     
 public:
+    int multiply(int a,int b)
+    {
+        return a * b;
+    }
 
     int multiplyByTen(int a)
     {
-        return a * 10;
+        return multiply(a,10);
     }
 
 
 };
 
 
-
 int main()
 {
 
-    A a;
+    Multiply multi;
     // Call the method multiplyByTen with 5 as the argument
     // This is equivalent to a.multiplyByTen(5)
-    cout << a.multiplyByTen(5)<< endl; // Output: 50
+    cout << multi.multiplyByTen(5)<< endl; // Output: 50
     
     return 0;
 }
