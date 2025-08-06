@@ -8,28 +8,24 @@ using namespace std::chrono_literals;
 
 class SimpleNode : public rclcpp::Node
 {
-public:
-  SimpleNode()
-  : Node("simple_node")
-  {
-    RCLCPP_INFO(this->get_logger(), "Simple node Is starting up...");
-
-    timer_= this->create_wall_timer(500ms, std::bind(&SimpleNode::timer_callback, this));
-
-  }
-    ~SimpleNode()
+  public:
+    SimpleNode()
+    : Node("simple_node")
     {
-        RCLCPP_INFO(this->get_logger(), "Simple node Is shutting down...");
+      RCLCPP_INFO(this->get_logger(), "Simple node Is starting up...");
+
+      timer_= this->create_wall_timer(500ms, std::bind(&SimpleNode::timer_callback, this));
+
     }
 
 
-private:
-    void timer_callback()
-    {
-      RCLCPP_INFO(this->get_logger(), "Simple node Is Running Now...");
-    }
+  private:
+      void timer_callback()
+      {
+        RCLCPP_INFO(this->get_logger(), "Simple node Is Running Now...");
+      }
 
-  rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::TimerBase::SharedPtr timer_;
 
   };
 int main(int argc, char * argv[])
