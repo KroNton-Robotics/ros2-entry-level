@@ -2,14 +2,14 @@
 #include <functional>
 
 
-class A
+class Multiply
 {
     
 public:
 
-    int multiplyByTen(int a)
+    int multiply(int a,int b)
     {
-        return a * 10;
+        return a * b;
     }
 
 
@@ -17,8 +17,10 @@ public:
 
 int main()
 {
-    A a;
-    auto callbackMethod= std::bind(&A::multiplyByTen,a,std::placeholders::_1);
+    Multiply multi;
+    
+    auto callbackMethod= std::bind(&Multiply::multiply,multi,10,std::placeholders::_1);
+
     std::cout << callbackMethod(5)<< std::endl; // Output: 50
     
     return 0;
