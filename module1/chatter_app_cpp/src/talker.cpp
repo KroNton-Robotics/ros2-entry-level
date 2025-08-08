@@ -13,7 +13,11 @@ public:
   ChatterPublisher()
   : Node("chatter_publisher"), count_(0)
   {
-    publisher_ = this->create_publisher<std_msgs::msg::String>("chatter", 10);
+     //10 = Quality of Service (QoS) history depth 
+     //Queue size (how many messages are stored if the network is slow).
+    publisher_ = this->create_publisher<std_msgs::msg::String>("chatter", 10);//Default QoS: KEEP_LAST, RELIABLE, VOLATILE.
+    
+
      message_ = std_msgs::msg::String();
 
     timer_ = this->create_wall_timer(500ms, std::bind(&ChatterPublisher::timer_callback,this));
@@ -30,7 +34,7 @@ private:
 
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
-  size_t count_;
+  size_t count_; //unsigned long size_t
   std_msgs::msg::String message_;
 };
 
