@@ -1,26 +1,25 @@
+#include <functional>
 #include <memory>
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
+using std::placeholders::_1;
 class ChatterSubscriber : public rclcpp::Node
 {
 public:
   ChatterSubscriber()
-  : Node("Chatter_subscriber")
+  : Node("chatter_subscriber")
   {
-    auto topic_callback =
-      [this](std_msgs::msg::String::UniquePtr msg) -> void {
-        
-      };
     subscription_ =
-      this->create_subscription<std_msgs::msg::String>("chatter", 10, topic_callback);
+      this->create_subscription<std_msgs::msg::String>("chatter", 10, std::bind(&ChatterSubscriber::chatter_callback,this,_1));
   }
 
 private:
   rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscription_;
-  void topic_callback(std_msgs::msg::String::UniquePtr msg){
-        RCLCPP_INFO(this->get_logger(), "I heard: '%s'", msg->data.c_str());
+
+  void chatter_callback(const std_msgs::msg::String & msg){
+    RCLCPP_INFO(this->get_logger(), "I heard: '%s'", msg.data.c_str());
   }
 };
 
