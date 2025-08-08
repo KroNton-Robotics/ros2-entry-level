@@ -13,7 +13,7 @@ int multiply(int a, int b)
 // int multiplyByTen(int a)
 // {
 //     return multiply(a, 10);
-// }
+// }multiply
 
 int main()
 {
