@@ -23,10 +23,12 @@ if(BUILD_TESTING)
 endif()
 
 add_executable(a_class_base src/concepts/oop/a_class_base.cpp)
-ament_target_dependencies(a_class_base rclcpp std_msgs) 
-
 add_executable(b_class_inherit src/concepts/oop/b_class_inherit.cpp)
-ament_target_dependencies(b_class_inherit rclcpp std_msgs) 
+add_executable(a_no_bind_func src/concepts/bind/a_no_bind_func.cpp)
+add_executable(b_bind_func src/concepts/bind/b_bind_func.cpp)
+add_executable(c_no_bind_class src/concepts/bind/c_no_bind_class.cpp)
+add_executable(d_bind_class src/concepts/bind/d_bind_class.cpp)
+
 
 
 
@@ -42,6 +44,10 @@ ament_target_dependencies(simple_timer_lambda_node rclcpp std_msgs)
 install(TARGETS
   a_class_base
   b_class_inherit
+  a_no_bind_func
+  b_bind_func
+  c_no_bind_class
+  d_bind_class
   simple_node
   simple_timer_node
   simple_timer_lambda_node
