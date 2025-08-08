@@ -18,16 +18,19 @@ class SimpleNode : public rclcpp::Node
 
     }
 
-
   private:
+
+      rclcpp::TimerBase::SharedPtr timer_;
+
       void timer_callback()
       {
         RCLCPP_INFO(this->get_logger(), "Simple node Is Running Now...");
       }
 
-    rclcpp::TimerBase::SharedPtr timer_;
+   
 
   };
+  
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
