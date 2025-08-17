@@ -7,9 +7,10 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(roccpp REQUIRED)
+find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(turtlesim REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -22,5 +23,22 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+include_directories(
+  include
+  ${ament_INCLUDE_DIRS}
+)
+
+add_executable(tutlesim_translation_node src/tutlesim_translation_node.cpp)
+ament_target_dependencies(tutlesim_translation_node rclcpp std_msgs turtlesim)
+
+install(
+  DIRECTORY include
+  DESTINATION include
+)
+
+install(TARGETS
+  tutlesim_translation_node
+  DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
