@@ -7,11 +7,9 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-
-install(
-  DIRECTORY urdf
-  DESTINATION share/${PROJECT_NMAE}
-)
+find_package(robot_state_publisher REQUIRED)
+# find_package(joint_state_publisher_gui REQUIRED)
+find_package(rviz2 REQUIRED)
 
 
 if(BUILD_TESTING)
@@ -23,4 +21,8 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+  install(
+  DIRECTORY launch urdf
+  DESTINATION share/${PROJECT_NAME}
+)
 ament_package()

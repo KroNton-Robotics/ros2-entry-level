@@ -1,4 +1,5 @@
 <robot name="dummybot">
+
     <link name="base_link">
         <inertial>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -11,7 +12,7 @@
                 <box size="0.4 0.2 0.1"/>
             </geometry>
             <material name="">
-                <color rgba="0.0 0.0 1.0 1.0"/>
+                <color rgba="0.1 0.0 0.5 1.0"/>
                 <texture filename=""/>
             </material>
         </visual>
@@ -34,6 +35,10 @@
             <geometry>
                 <cylinder radius="0.1" length="0.05"/>
             </geometry>
+            <material name="">
+                <color rgba="0.5 0.2 0.1 1.0"/>
+                <texture filename=""/>
+            </material>
         </visual>
         <collision name='left_wheel_collision'>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -54,6 +59,10 @@
             <geometry>
                 <cylinder radius="0.1" length="0.05"/>
             </geometry>
+            <material name="">
+                <color rgba="0.5 0.2 0.1 1.0"/>
+                <texture filename=""/>
+            </material>
         </visual>
         <collision name='right_wheel_collision'>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -70,8 +79,6 @@
         <axis xyz="0.0 0.0 1.0"/>
 
     </joint>
-
-
 
 
     <joint name="wheel_right_joint" type="continuous">
@@ -95,7 +102,7 @@
                 <sphere radius="0.0499"/>
             </geometry>
             <material name="">
-                <color rgba="1.0 1.0 1.0 1.0"/>
+                <color rgba="0.1 0.1 0.1 1.0"/>
                 <texture filename=""/>
             </material>
         </visual>
@@ -126,7 +133,7 @@
                 <sphere radius="0.0499"/>
             </geometry>
             <material name="">
-                <color rgba="1.0 1.0 1.0 1.0"/>
+                <color rgba="0.1 0.1 0.1 1.0"/>
                 <texture filename=""/>
             </material>
         </visual>
